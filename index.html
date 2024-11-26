@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шифр Плейфера</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <h1>Шифр Плейфера</h1>
+            <div class="form-group">
+                <label for="key">Введите значение ключа:</label>
+                <input type="text" id="key" placeholder="Введите ключ">
+            </div>
+            <div class="form-group">
+                <label>Выберите язык:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="language" value="russian" checked> Русский</label>
+                    <label><input type="radio" name="language" value="english"> Английский</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="text">Введите текст:</label>
+                <textarea id="text" rows="5" placeholder="Введите текст для шифрования"></textarea>
+            </div>
+            <div class="matrix-container">
+                <label>Ключевая матрица:</label>
+                <div id="matrix"></div>
+            </div>
+            <div class="buttons">
+                <button onclick="encryptText()">Зашифровать</button>
+                <button onclick="decryptText()">Дешифровать</button>
+            </div>
+            <div class="form-group">
+                <label for="result">Результат:</label>
+                <textarea id="result" rows="5" readonly></textarea>
+            </div>
+        </div>
+        <div class="cat-container">
+            <h2>Ваш котик дня:</h2>
+            <img src="./sticker.webp" alt="Милый котик">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
